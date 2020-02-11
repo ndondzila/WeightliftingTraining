@@ -1,0 +1,30 @@
+
+
+.navbar {
+    padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.col {
+    color: white;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+img {
+    opacity: 0.5;
+}
+
+img:hover {
+    opacity: 1.0;
+}
