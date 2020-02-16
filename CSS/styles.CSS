@@ -1,15 +1,40 @@
-html, body {
-    margin: 0px;
-    padding: 0px;
-}
-
 hr {
   color: white;
+}
+
+img:hover {
+    opacity: 0.75;
+}
+
+h2 {
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+#introduction {
+    background-color: #263F44;
+    color: white;
+    text-align: center;
 }
 
 #navigation {
     background-color: #263F44;
     color: white;
+    text-align: center;
+}
+
+#features {
+    padding: 3% 10%;
+}
+
+#testimonials {
+    background-color: #263F44;
+    text-align: center;
+    color: white;
+}
+
+#sellingStuff {
+    padding: 5% 5%;
     text-align: center;
 }
 
@@ -32,26 +57,8 @@ hr {
     font-weight: lighter;
 }
 
-#introduction {
-    background-color: #263F44;
-    color: white;
-    text-align: center;
-}
-
 .col {
     padding: 5%;
-}
-
-img {
-    opacity: 0.5;
-}
-
-img:hover {
-    opacity: 1.0;
-}
-
-#features {
-    padding: 3% 10%;
 }
 
 .feature-box {
@@ -70,24 +77,8 @@ img:hover {
     opacity: 1.0;
 }
 
-h2 {
-    font-weight: bolder;
-    margin-bottom: 1rem;
-}
-
-#testimonials {
-    background-color: #263F44;
-    text-align: center;
-    color: white;
-}
-
 .carousel-item {
     padding: 15%, 15%;
-}
-
-#sellingStuff {
-    padding: 5% 5%;
-    text-align: center;
 }
 
 .card {
