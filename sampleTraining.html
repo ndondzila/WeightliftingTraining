@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="CSS/styles.CSS" />
+  <script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
+  <title>Dondzila Training is best training</title>
+</head>
+
+<body>
+  <section id="navigation">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="navbar-brand" href="">Dondzila Training</div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sampleTraining.html">Sample Training Week</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://outputperformance.com/">Where I Lift</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <section id="programInput">
+    <div class="container-fluid">
+      <h1 class="hook pad">Fill out the following with your max lifts to generate a sample training week</h1>
+      <hr />
+      <div class="row">
+
+        <div class="col-4">
+          <div class="form-group">
+            <label><strong>Snatch:</strong></label>
+            <input class="form-control" id="snatch" type="text" />
+          </div>
+          <div class="form-group">
+            <label><strong>Clean & Jerk:</strong></label>
+            <input class="form-control" id="clean" type="text" />
+          </div>
+          <div class="form-group">
+            <label><strong>High bar squat:</strong></label>
+            <input class="form-control" id="squat" type="text" />
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="form-group">
+            <label><strong>Front squat:</strong></label>
+            <input class="form-control" id="frontSquat" type="text" />
+          </div>
+          <div class="form-group">
+            <label><strong>Clean deadlift:</strong></label>
+            <input class="form-control" id="cleanDL" type="text" />
+          </div>
+          <div class="form-group">
+            <label><strong>Snatch deadlift:</strong></label>
+            <input class="form-control" id="snatchDL" type="text" />
+          </div>
+        </div>
+
+        <div class="col-4" style="text-align: center;">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="kilos" id="kilos" autocomplete="off" checked>Kilos
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="pounds" id="pounds" autocomplete="off">Pounds
+            </label>
+          </div>
+          <br />
+          <br />
+          <div>
+            <input type="submit" value="Generate Sample Week" onclick="generateStrength(); generateClassics()" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="sampleTraining">
+    <div class="container-fluid">
+      <table id="trainingWeek" class="table table-bordered table-striped table-hover d-none">
+        <thead>
+          <tr>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+            <th scope="col">Saturday</th>
+            <th scope="col">Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="monWarm">Hang from knee power clean + power jerk: 3x3+3 with empty bar - 30%</td>
+            <td id="tuesWarm">Front rack step ups to knee height box: 3x5/leg with empty bar</td>
+            <td id="wedWarm">Hang from knee high pull + hang from knee power snatch + slow OHS: 3x3+3+3 with empty bar</td>
+            <td id="rest">Rest</td>
+            <td id="friWarm">High pull + low hang power snatch + snatch balance: 3x2+2+2 with empty bar - 30%</td>
+            <td id="satWarm">Lateral steps over knee height hurdle: 3x5/side</td>
+            <td id="rest">Rest</td>
+          </tr>
+          <tr>
+            <td id="monCJ"></td>
+            <td id="tuesFS"></td>
+            <td id="wedSn"></td>
+            <td id="rest">Recover</td>
+            <td id="friSn"></td>
+            <td id="satStr1"></td>
+            <td id="rest">Recover</td>
+          </tr>
+          <tr>
+            <td id="monPull"></td>
+            <td id="tuesBS"></td>
+            <td id="wedPull"></td>
+            <td id="rest">Stretch</td>
+            <td id="friCJ"></td>
+            <td id="satFS"></td>
+            <td id="rest">Stretch</td>
+          </tr>
+
+          <tr>
+            <th scope="col">Accessories</th>
+            <th scope="col">Accessories</th>
+            <th scope="col">Accessories</th>
+            <th scope="col">Accessories</th>
+            <th scope="col">Accessories</th>
+            <th scope="col">Accessories</th>
+            <th scope="col">Accessories</th>
+          </tr>
+          <tr>
+            <td id="mond">Single leg DB RDLs: 3x8/leg with light DBs</td>
+            <td id="tues">Rear foot elevated split squats: 3x8/leg</td>
+            <td id="wed">Dumbbell push press: 3x8 with moderate DBs</td>
+            <td id="rest">Eat</td>
+            <td id="fri">Misc make-up</td>
+            <td id="sat">Barbell or DB bench: 3x5</td>
+            <td id="rest">Eat</td>
+          </tr>
+          <tr>
+            <td id="mon">Pull-ups/ring rows: 3x10-12 with control</td>
+            <td id="tues">Side planks: 3x30s/side</td>
+            <td id="wed">Single-arm upright row: 3x8/arm with light DB</td>
+            <td id="rest">Sleep</td>
+            <td id="fri">Core</td>
+            <td id="sat">Core</td>
+            <td id="rest">Sleep</td>
+          </tr>
+          <tr>
+            <td id="mon">Back extension: 3x12+30s isometric hold</td>
+            <td id="tues">Hanging knee raises: 3x20</td>
+            <td id="wed">Goodmornings: 3x8 with light weight</td>
+            <td id="rest">Etc.</td>
+            <td id="fri"></td>
+            <td id="sat"></td>
+            <td id="rest">Etc.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="training.js"></script>
+</body>
+
+</html>

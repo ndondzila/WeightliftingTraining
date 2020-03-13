@@ -2,8 +2,9 @@ hr {
   color: white;
 }
 
+
 img:hover {
-    opacity: 0.75;
+    opacity: 0.9;
 }
 
 h2 {
@@ -38,6 +39,15 @@ h2 {
     text-align: center;
 }
 
+#sampleTraining {
+  padding: 5%;
+  text-align: center;
+}
+
+#trainingWeek {
+
+}
+
 .hook {
     font-size: 3rem;
     font-weight: bolder;
@@ -60,10 +70,18 @@ h2 {
 .col {
     padding: 5%;
 }
+.col-4 {
+  padding: 3%;
+  margin: auto;
+}
 
 .feature-box {
     padding: 5%;
     text-align: center;
+}
+
+.pad {
+  padding: 5%;
 }
 
 .icon {
