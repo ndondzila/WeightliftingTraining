@@ -15,10 +15,10 @@ jobs:
 
       - name: Merge Int to Test
         run: |
-          git checkout "TestMeow"
-          git pull origin "IntMeow"
+          git checkout 'origin/TestMeow'
+          git pull origin 'origin/IntMeow'
 
-      - name: Merge Test to Stage
-        run: |
-          git checkout "StageMeow"
-          git pull origin "TestMeow"
+   ###   - name: Merge Test to Stage
+   ###     run: |
+   ###        git checkout "StageMeow"
+   ###        git pull origin "TestMeow"
