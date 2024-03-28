@@ -1,6 +1,6 @@
 # test number 2
 
-name: CI/CD Pipeline
+name: Auto Merge
 
 on:
   pull_request:
@@ -13,10 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Merge Int to Test
+      - name: Merge IntMeow to TestMeow
         run: |
-          git checkout 'origin/TestMeow'
-          git pull origin 'origin/IntMeow'
+          git checkout TestMeow
+          git pull origin IntMeow
 
    ###   - name: Merge Test to Stage
    ###     run: |
