@@ -2,29 +2,25 @@
 
 name: CI/CD Pipeline
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
   pull_request:
     types: [ closed ]
     branches: 
       - IntMeow
-      
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  createPullRequest:
+  merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Pull Request
-        with:
-          commit-message: Auto pull to Test
-          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
-          signoff: false
-          base: IntMeow
-          branch: TestMeow
-          delete-branch: false
-          labels: 
-            automated pull request
-       
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge Int to Test
+        run: |
+          git checkout TestMeow
+          git pull origin IntMeow
+
+      - name: Merge Test to Stage
+        run: |
+          git checkout StageMeow
+          git pull origin TestMeow
