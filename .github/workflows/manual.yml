@@ -15,8 +15,8 @@ jobs:
 
       - name: Merge IntMeow to TestMeow
         run: |
-          git checkout TestMeow
-          git pull origin IntMeow
+          git checkout refs/remotes/origin/TestMeow
+          git pull origin refs/remotes/origin/IntMeow
 
    ###   - name: Merge Test to Stage
    ###     run: |
