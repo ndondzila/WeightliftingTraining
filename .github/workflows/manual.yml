@@ -1,0 +1,26 @@
+# This is a basic workflow that is manually triggered
+
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    types: [ closed ]
+    branches: 
+      - IntMeow
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge Int to Test
+        run: |
+          git checkout TestMeow
+          git pull origin IntMeow
+
+      - name: Merge Test to Stage
+        run: |
+          git checkout StageMeow
+          git pull origin TestMeow
