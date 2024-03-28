@@ -1,0 +1,30 @@
+# This is a basic workflow that is manually triggered
+
+name: CI/CD Pipeline
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  pull_request:
+    types: [ closed ]
+    branches: 
+      - IntMeow
+      
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  createPullRequest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Pull Request
+        with:
+          commit-message: Auto pull to Test
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          base: IntMeow
+          branch: TestMeow
+          delete-branch: false
+          labels: 
+            automated pull request
+       
