@@ -5,8 +5,6 @@ name: CI/CD Pipeline
 on:
   pull_request:
     types: [ closed ]
-    branches: 
-      - IntMeow
 
 jobs:
   merge:
