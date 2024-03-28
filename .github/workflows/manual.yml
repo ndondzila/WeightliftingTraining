@@ -17,10 +17,10 @@ jobs:
 
       - name: Merge Int to Test
         run: |
-          git checkout TestMeow
-          git pull origin IntMeow
+          git checkout WeightliftingTraining/TestMeow
+          git pull origin WeightliftingTraining/IntMeow
 
       - name: Merge Test to Stage
         run: |
-          git checkout StageMeow
-          git pull origin TestMeow
+          git checkout WeightliftingTraining/StageMeow
+          git pull origin WeightliftingTraining/TestMeow
