@@ -19,7 +19,7 @@ jobs:
         run: |
             git fetch origin
             git checkout TestMeow
-            git pull origin IntMeow
+            git pull origin IntMeow -f
 
    ###   - name: Merge Test to Stage
    ###     run: |
