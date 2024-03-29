@@ -22,11 +22,5 @@ jobs:
             git fetch origin
             git config pull.rebase false
             git checkout TestMeow
-            git add github/workflows/manual.yml
             git pull origin IntMeow -f --allow-unrelated-histories
             git push remote origin
-
-   ###   - name: Merge Test to Stage
-   ###     run: |
-   ###        git checkout "StageMeow"
-   ###        git pull origin "TestMeow"
