@@ -24,7 +24,3 @@ jobs:
             git checkout TestMeow
             git merge origin IntMeow --allow-unrelated-histories
 
-   ###   - name: Merge Test to Stage
-   ###     run: |
-   ###        git checkout "StageMeow"
-   ###        git pull origin "TestMeow"
