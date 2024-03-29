@@ -20,7 +20,7 @@ jobs:
             git fetch origin
             git config pull.rebase false
             git checkout TestMeow
-            git pull origin IntMeow -f
+            git pull origin IntMeow -f --allow-unrelated-histories
             git push remote origin
 
    ###   - name: Merge Test to Stage
