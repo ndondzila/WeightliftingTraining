@@ -18,8 +18,10 @@ jobs:
       - name: Merge IntMeow to TestMeow
         run: |
             git fetch origin
+            git config pull.rebase false
             git checkout TestMeow
             git pull origin IntMeow -f
+            git push remote origin
 
    ###   - name: Merge Test to Stage
    ###     run: |
