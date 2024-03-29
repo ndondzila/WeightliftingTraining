@@ -22,5 +22,6 @@ jobs:
             git fetch origin
             git config pull.rebase false
             git checkout TestMeow
-            git merge origin IntMeow --allow-unrelated-histories
+            git stash 
+            git pull origin IntMeow --allow-unrelated-histories
 
