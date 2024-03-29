@@ -4,6 +4,8 @@ name: Auto Merge
 
 on:
   pull_request:
+    branches:
+      - IntMeow
     types: [ closed ]
 
 jobs:
@@ -16,9 +18,8 @@ jobs:
       - name: Merge IntMeow to TestMeow
         run: |
             git fetch origin
-            git branch -a
-    ###      git checkout refs/remotes/origin/TestMeow
-    ###      git pull origin refs/remotes/origin/IntMeow
+            git checkout remotes/origin/TestMeow
+            git pull origin remotes/origin/IntMeow
 
    ###   - name: Merge Test to Stage
    ###     run: |
