@@ -15,6 +15,7 @@ jobs:
 
       - name: Merge IntMeow to TestMeow
         run: |
+            git fetch origin
             git branch -a
     ###      git checkout refs/remotes/origin/TestMeow
     ###      git pull origin refs/remotes/origin/IntMeow
