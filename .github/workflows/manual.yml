@@ -21,6 +21,6 @@ jobs:
             git fetch origin
             git checkout TestMeow
             rm -rfv .github/workflows
-            git commit -m 'Resolve git Add/Add branch merge conflict by deleting conflicted folder and files'
+            git commit -a -m 'Resolve git Add/Add branch merge conflict by deleting conflicted folder and files'
             git merge origin/IntMeow --allow-unrelated-histories
             git push origin TestMeow
