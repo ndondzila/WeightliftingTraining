@@ -19,7 +19,6 @@ jobs:
         run: |
             git config --global user.email "ndondzila@gmail.com"
             git config --global user.name "nick"
-            git fetch origin
             git config pull.rebase false
-            git push remote TestMeow
-
+            git fetch origin
+            git push -u origin TestMeow
