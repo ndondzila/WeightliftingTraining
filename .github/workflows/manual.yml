@@ -1,5 +1,4 @@
 #plzmeow
-
 name: Auto Merge
 
 on:
@@ -20,7 +19,8 @@ jobs:
             git config --global user.email "ndondzila@gmail.com"
             git config --global user.name "nick"
             git fetch origin
-            git config pull.rebase false
             git checkout TestMeow
-            git pull origin IntMeow -f --allow-unrelated-histories
-            git push remote origin
+            rm -rfv .github/workflows
+            git commit -a -m 'Resolve git Add/Add branch merge conflict by deleting conflicted folder and files'
+            git merge origin/IntMeow --allow-unrelated-histories
+            git push origin TestMeow
