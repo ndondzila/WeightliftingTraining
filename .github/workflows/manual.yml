@@ -21,4 +21,4 @@ jobs:
             git config --global user.name "nick"
             git config pull.rebase false
             git fetch origin
-            git push -u origin TestMeow
+            git push -u origin/TestMeow
