@@ -20,5 +20,8 @@ jobs:
             git config --global user.name "nick"
             git fetch origin
             git checkout TestMeow
+            git merge --abort
+            rm -rfv .github/workflows
+            git commit -m 'Resolve git Add/Add branch merge conflict by deleting conflicted folder and files'
             git merge origin/IntMeow --allow-unrelated-histories
             git push origin TestMeow
