@@ -21,7 +21,5 @@ jobs:
             git config --global user.name "nick"
             git fetch origin
             git config pull.rebase false
-            git checkout TestMeow
-            git stash 
-            git pull origin IntMeow --allow-unrelated-histories
+            git push remote TestMeow
 
