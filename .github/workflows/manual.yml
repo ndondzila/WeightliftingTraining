@@ -20,5 +20,5 @@ jobs:
             git config --global user.name "nick"
             git fetch origin
             git checkout TestMeow
-            git merge origin/IntMeow
+            git merge origin/IntMeow --allow-unrelated-histories
             git push origin TestMeow
