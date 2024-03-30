@@ -1,0 +1,26 @@
+#plzmeow
+name: Auto Merge
+
+on:
+  pull_request:
+    branches:
+      - IntMeow
+    types: [ closed ]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge IntMeow to TestMeow
+        run: |
+            git config --global user.email "ndondzila@gmail.com"
+            git config --global user.name "nick"
+            git fetch origin
+            git checkout TestMeow
+            rm -rfv .github/workflows
+            git commit -a -m 'Resolve git Add/Add branch merge conflict by deleting conflicted folder and files'
+            git merge origin/IntMeow --allow-unrelated-histories
+            git push origin TestMeow
