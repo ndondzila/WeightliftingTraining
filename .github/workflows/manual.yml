@@ -24,3 +24,14 @@ jobs:
             git commit -a -m 'Resolve git Add/Add branch merge conflict by deleting conflicted folder and files'
             git merge origin/IntMeow --allow-unrelated-histories
             git push origin TestMeow
+
+      - name: Merge Test to Stage
+        run: |
+            git config --global user.email "ndondzila@gmail.com"
+            git config --global user.name "nick"
+            git fetch origin
+            git checkout StageMeow
+            rm -rfv .github/workflows
+            git commit -a -m 'Resolve git Add/Add branch merge conflict by deleting conflicted folder and files'
+            git merge origin/TestMeow --allow-unrelated-histories
+            git push origin StageMeow
