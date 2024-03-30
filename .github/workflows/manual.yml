@@ -1,5 +1,4 @@
-#thisworks
-
+#plzmeow
 name: Auto Merge
 
 on:
@@ -9,14 +8,17 @@ on:
     types: [ closed ]
 
 jobs:
-  sync-branch:
+  merge:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Merge Int -> Test
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: IntMeow
-          target_branch: TestMeow
+      - name: Merge IntMeow to TestMeow
+        run: |
+            git config --global user.email "ndondzila@gmail.com"
+            git config --global user.name "nick"
+            git fetch origin
+            git checkout TestMeow
+            git merge origin/IntMeow
+            git push origin TestMeow
