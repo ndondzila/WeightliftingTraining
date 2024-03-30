@@ -9,16 +9,14 @@ on:
     types: [ closed ]
 
 jobs:
-  merge:
+  sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
 
-      - name: Merge IntMeow to TestMeow
-        run: |
-            git config --global user.email "ndondzila@gmail.com"
-            git config --global user.name "nick"
-            git config pull.rebase false
-            git fetch origin
-            git push -u origin/TestMeow
+      - name: Merge Int -> Test
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: IntMeow
+          target_branch: TestMeow
